@@ -5,7 +5,7 @@
 }
 
 @{
-    var className = Model.Customer.Count > 5 ? "Popular" : null;
+    var className = Model.Customer.Count > 0 ? "Popular" : null;
 }
 
 <h2 class="@className">@Model.Movie.Name</h2>

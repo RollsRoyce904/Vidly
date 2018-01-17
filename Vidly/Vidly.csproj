@@ -221,6 +221,30 @@
     <Compile Include="Migrations\201801091236000_MembershipDBSET.Designer.cs">
       <DependentUpon>201801091236000_MembershipDBSET.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801170256585_AddNameToMembershipType.cs" />
+    <Compile Include="Migrations\201801170256585_AddNameToMembershipType.Designer.cs">
+      <DependentUpon>201801170256585_AddNameToMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801170342152_AddGenre.cs" />
+    <Compile Include="Migrations\201801170342152_AddGenre.Designer.cs">
+      <DependentUpon>201801170342152_AddGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801170615114_UpdateMembershipClass.cs" />
+    <Compile Include="Migrations\201801170615114_UpdateMembershipClass.Designer.cs">
+      <DependentUpon>201801170615114_UpdateMembershipClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801170619202_AddNameToMembType.cs" />
+    <Compile Include="Migrations\201801170619202_AddNameToMembType.Designer.cs">
+      <DependentUpon>201801170619202_AddNameToMembType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801170624513_AddMembType.cs" />
+    <Compile Include="Migrations\201801170624513_AddMembType.Designer.cs">
+      <DependentUpon>201801170624513_AddMembType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801170627335_SetNameOfMembershipTypes.cs" />
+    <Compile Include="Migrations\201801170627335_SetNameOfMembershipTypes.Designer.cs">
+      <DependentUpon>201801170627335_SetNameOfMembershipTypes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -233,6 +257,7 @@
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-lumen.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -296,6 +321,7 @@
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Customers\Edit.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Movies\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -332,6 +358,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801091236000_MembershipDBSET.resx">
       <DependentUpon>201801091236000_MembershipDBSET.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801170256585_AddNameToMembershipType.resx">
+      <DependentUpon>201801170256585_AddNameToMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801170342152_AddGenre.resx">
+      <DependentUpon>201801170342152_AddGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801170615114_UpdateMembershipClass.resx">
+      <DependentUpon>201801170615114_UpdateMembershipClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801170619202_AddNameToMembType.resx">
+      <DependentUpon>201801170619202_AddNameToMembType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801170624513_AddMembType.resx">
+      <DependentUpon>201801170624513_AddMembType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801170627335_SetNameOfMembershipTypes.resx">
+      <DependentUpon>201801170627335_SetNameOfMembershipTypes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
