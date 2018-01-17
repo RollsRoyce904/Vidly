@@ -15,7 +15,7 @@ namespace Vidly.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Customers
-        public ActionResult Index()
+        public ViewResult Index()
         {
             var customers = db.Customers.Include(c => c.MembershipType);
             return View(customers.ToList());
