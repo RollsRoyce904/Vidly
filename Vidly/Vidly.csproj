@@ -245,15 +245,33 @@
     <Compile Include="Migrations\201801170627335_SetNameOfMembershipTypes.Designer.cs">
       <DependentUpon>201801170627335_SetNameOfMembershipTypes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801181550365_addbirthday.cs" />
+    <Compile Include="Migrations\201801181550365_addbirthday.Designer.cs">
+      <DependentUpon>201801181550365_addbirthday.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801181559204_addgenresclass.cs" />
+    <Compile Include="Migrations\201801181559204_addgenresclass.Designer.cs">
+      <DependentUpon>201801181559204_addgenresclass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801240342395_updateGenreAndMovies.cs" />
+    <Compile Include="Migrations\201801240342395_updateGenreAndMovies.Designer.cs">
+      <DependentUpon>201801240342395_updateGenreAndMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801240344201_addGenreTypes.cs" />
+    <Compile Include="Migrations\201801240344201_addGenreTypes.Designer.cs">
+      <DependentUpon>201801240344201_addGenreTypes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\NewCustomerViewModel.cs" />
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -322,6 +340,7 @@
     <Content Include="Views\Customers\Edit.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -376,6 +395,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801170627335_SetNameOfMembershipTypes.resx">
       <DependentUpon>201801170627335_SetNameOfMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801181550365_addbirthday.resx">
+      <DependentUpon>201801181550365_addbirthday.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801181559204_addgenresclass.resx">
+      <DependentUpon>201801181559204_addgenresclass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801240342395_updateGenreAndMovies.resx">
+      <DependentUpon>201801240342395_updateGenreAndMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801240344201_addGenreTypes.resx">
+      <DependentUpon>201801240344201_addGenreTypes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

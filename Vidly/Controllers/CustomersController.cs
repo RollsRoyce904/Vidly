@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Vidly.Models;
+using Vidly.ViewModels;
 
 namespace Vidly.Controllers
 {
@@ -43,30 +44,36 @@ namespace Vidly.Controllers
             return View(customer);
         }
 
-        //// GET: Customers/Create
-        //public ActionResult Create()
-        //{
-        //    ViewBag.MemberShipTypeId = new SelectList(db.MembershipTypes, "Id", "Id");
-        //    return View();
-        //}
+        // GET: Customers/Create
+        public ActionResult Create()
+        {
+            var membershipTypes = db.MembershipTypes.ToList();
 
-        //// POST: Customers/Create
-        //// To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        //// more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult Create([Bind(Include = "Id,Name,IsSubscribedToNewsLetter,MemberShipTypeId")] Customer customer)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        db.Customers.Add(customer);
-        //        db.SaveChanges();
-        //        return RedirectToAction("Index");
-        //    }
+            var viewModel = new NewCustomerViewModel
+            {
+                MembershipTypes = membershipTypes
+            };
 
-        //    ViewBag.MemberShipTypeId = new SelectList(db.MembershipTypes, "Id", "Id", customer.MemberShipTypeId);
-        //    return View(customer);
-        //}
+            return View(viewModel);
+        }
+
+        // POST: Customers/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "Id,Name,IsSubscribedToNewsLetter,MemberShipTypeId")] Customer customer)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Customers.Add(customer);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            ViewBag.MemberShipTypeId = new SelectList(db.MembershipTypes, "Id", "Id", customer.MemberShipTypeId);
+            return View(customer);
+        }
 
         //// GET: Customers/Edit/5
         //public ActionResult Edit(int? id)
